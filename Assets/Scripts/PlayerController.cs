@@ -25,7 +25,9 @@ public class PlayerController : MonoBehaviour
 
   void MovePlayer()
   {
-    if (true)
+    // Hacky collision detection
+    // TODO: Come up with better solution using ray casting
+    if (Mathf.RoundToInt(targetGridPos.x) % 2 == 0 || Mathf.RoundToInt(targetGridPos.z) % 2 == 0)
     {
       prevTargetGridPos = targetGridPos;
 
